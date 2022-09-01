@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: Ubuntu-Latest
+    runs-on: macos-latest
     container:
       image: fcbrbrazil/coverity:2022.6.0
       credentials:
