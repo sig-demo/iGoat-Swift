@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: Ubuntu-latest
     env:
       POLARIS_SERVER_URL:  ${{ secrets.POLARIS_SERVER_URL }}
       POLARIS_ACCESS_TOKEN:  ${{ secrets.POLARIS_ACCESS_TOKEN }}
