@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: Ubuntu-Latest
     container:
       image: fcbrbrazil/coverity:2022.6.0
       credentials:
@@ -18,15 +18,11 @@ jobs:
       BLACKDUCK_API_TOKEN: ${{ secrets.BLACKDUCK_API_TOKEN }}
 
     steps:
-    - uses: fwal/setup-swift@2040b795e5c453c3a05fcb8316496afc8a74f192
-      with:
-       swift-version: "5.3.3" 
-    - uses: actions/checkout@v3
-    
+    - uses: actions/checkout@v2
     
 
     # Perform Static Analysis
     - name: Polaris (SAST)
       run: |
-        cov-build --dir idir --fs-capture-search . swift build
+        cov-build --dir idir --fs-capture-search . --no-command
         cov-analyze --dir idir --all --webapp-security --enable-audit-mode
