@@ -36,7 +36,7 @@ jobs:
     # Convert Polaris to SARIF
     - name: polaris_sarif
       run: |
-        node scripts/SARIF/cov-format-sarif-for-github.js --inputFile .synopsys/polaris/data/coverity/2022.6.0/idir/incremental-results/incremental-results.json --repoName sig-demo/DVWA --checkoutPath sig-demo/DVWA /DVWA/ $GH_SECRET --outputFile GitHubSarif.json
+        node scripts/SARIF/cov-format-sarif-for-github.js --inputFile .synopsys/polaris/data/coverity/2022.6.0/idir/incremental-results/incremental-results.json --repoName sig-demo/iGoat-Swift --checkoutPath sig-demo/iGoat-Swift /iGoat-Swift/ $GH_SECRET --outputFile GitHubSarif.json
         
   # Upload Polaris findings to GitHub Actions
     - name: Upload Polaris results
