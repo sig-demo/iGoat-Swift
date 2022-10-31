@@ -11,8 +11,8 @@ capture:
 analyze:
     mode: central
 coverity:
-    cov-analyze: ["--webapp-security", "--enable-audit-mode"]
+    cov-analyze: ["--all", "--webapp-security", "--enable-audit-mode"]
 install:
   coverity:
     version: default
-serverUrl: https://demo.polaris.synopsys.com
+serverUrl: 
